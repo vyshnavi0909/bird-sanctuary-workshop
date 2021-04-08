@@ -6,15 +6,14 @@ public class Main {
         Duck duck = new Duck();
         Duck duck1 = new Duck();
         Parrot parrot = new Parrot();
-        Parrot parrot1 = new Parrot();
         Penguin penguin = new Penguin();
         ToyDuck toyDuck = new ToyDuck();
         Duck duck2 = new Duck();
 
 
         sanctuary.add(duck);
+        sanctuary.add(duck);
         sanctuary.add(duck1);
-        sanctuary.add(parrot1);
         sanctuary.add(parrot);
         sanctuary.add(penguin);
         sanctuary.add(toyDuck);
@@ -29,6 +28,6 @@ public class Main {
         sanctuary.printSwimmable();
         sanctuary.printEatable();
 
-        System.out.println(duck.getCount() +" " + Parrot.count + " " + Penguin.count + " " + ToyDuck.count);
+        System.out.println(Duck.count +" " + Parrot.count + " " + Penguin.count + " " + ToyDuck.count);
     }
 }

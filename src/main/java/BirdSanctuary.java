@@ -20,8 +20,11 @@ public class BirdSanctuary {
     }
 
     public void add(Bird bird){
-        birdsList.add(bird);
-        bird.incrementCount();
+        boolean birdTest = birdsList.stream().anyMatch(i -> i.equals(bird));
+        if (!birdTest) {
+            birdsList.add(bird);
+            bird.incrementCount();
+        }
     }
 
     public void remove(Bird bird){

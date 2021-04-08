@@ -8,13 +8,13 @@ Bird.java
  Bird
 Parrot.java
  Parrot
-Main.java
- Main
-ToyDuck.java
- ToyDuck
-BirdSanctuary.java
- BirdSanctuary
-Duck.java
- Duck
 Penguin.java
  Penguin
+ToyDuck.java
+ ToyDuck
+Duck.java
+ Duck
+BirdSanctuary.java
+ BirdSanctuary
+Main.java
+ Main
