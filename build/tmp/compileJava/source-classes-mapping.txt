@@ -4,17 +4,17 @@ Swimmable.java
  Swimmable
 Eatable.java
  Eatable
-Bird.java
- Bird
 Parrot.java
  Parrot
 Penguin.java
  Penguin
-ToyDuck.java
- ToyDuck
+Bird.java
+ Bird
 Duck.java
  Duck
 BirdSanctuary.java
  BirdSanctuary
+ToyDuck.java
+ ToyDuck
 Main.java
  Main

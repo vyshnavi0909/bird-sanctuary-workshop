@@ -13,7 +13,7 @@ public class ToyDuck extends Bird implements Flyable, Swimmable {
 
     @Override
     int getCount() {
-        return 0;
+        return count;
     }
 
     @Override
