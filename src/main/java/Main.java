@@ -12,17 +12,16 @@ public class Main {
         ToyDuck toyDuck2 = new ToyDuck();
         Parrot parrot2 = new Parrot();
 
-
-        sanctuary.add(duck);
-        sanctuary.add(duck);
-        sanctuary.add(duck1);
-        sanctuary.add(parrot);
-        sanctuary.add(penguin);
-        sanctuary.add(toyDuck);
-        sanctuary.add(duck2);
-        sanctuary.add(toyDuck2);
-        sanctuary.add(toyDuck);
-        sanctuary.add(parrot2);
+        sanctuary.addBird(duck);
+        sanctuary.addBird(duck);
+        sanctuary.addBird(duck1);
+        sanctuary.addBird(null);
+        sanctuary.addBird(penguin);
+        sanctuary.addBird(toyDuck);
+        sanctuary.addBird(duck2);
+        sanctuary.addBird(toyDuck2);
+        sanctuary.addBird(toyDuck);
+        sanctuary.addBird(parrot2);
 
         sanctuary.remove(duck1);
         sanctuary.remove(duck2);
@@ -32,6 +31,6 @@ public class Main {
         sanctuary.printSwimmable();
         sanctuary.printEatable();
 
-        System.out.println(duck.getCount() +" " + parrot.getCount() + " " + penguin.getCount() + " " + toyDuck.getCount());
+        System.out.println("Duck count " + duck.getCount() +"\nParrot Count " + parrot.getCount() + "\nPenguin Count " + penguin.getCount() + "\nToy Duck Count " + toyDuck.getCount());
     }
 }

@@ -1,7 +1,4 @@
-
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class BirdSanctuary {
@@ -19,11 +16,16 @@ public class BirdSanctuary {
         return instance;
     }
 
-    public void add(Bird bird){
-        boolean isBirdAdded = birdsList.stream().anyMatch(i -> i.equals(bird));
-        if (!isBirdAdded) {
-            birdsList.add(bird);
-            bird.incrementCount();
+    public void addBird(Bird bird){
+        try{
+            if (bird == null) {
+                throw new BirdSanctuaryAddException("Bird added is null");
+            }
+            if(birdsList.add(bird)) {
+                bird.incrementCount();
+            }
+        } catch (BirdSanctuaryAddException e) {
+            e.printStackTrace();
         }
     }
 
@@ -33,24 +35,31 @@ public class BirdSanctuary {
     }
 
     public void printFlyable(){
-        for (Bird b : birdsList ){
-          if(b instanceof Flyable) {
-              ((Flyable)b).fly();
-          }
-        }
+//        for (Bird b : birdsList ){
+//          if(b instanceof Flyable) {
+//              ((Flyable)b).fly();
+//          }
+//        }
+        birdsList.stream()
+                .filter(b -> b instanceof Flyable)
+                .forEach(bird -> ((Flyable) bird).fly());
     }
     public void printSwimmable(){
-        for(Bird b : birdsList){
-            if(b instanceof Swimmable){
-                ((Swimmable)b).swim();
-            }
-        }
+//        for(Bird b : birdsList){
+//            if(b instanceof Swimmable){
+//                ((Swimmable)b).swim();
+//            }
+//        }
+        birdsList.stream().filter(b -> b instanceof Swimmable).forEach(bird -> ((Swimmable) bird).swim());
     }
     public void printEatable(){
-        for (Bird b : birdsList){
-            if(b instanceof Eatable){
-                ((Eatable)b).eat();
-            }
-        }
+//        for (Bird b : birdsList){
+//            if(b instanceof Eatable){
+//                ((Eatable)b).eat();
+//            }
+//        }
+        birdsList.stream()
+                .filter(b -> b instanceof Eatable)
+                .forEach(bird -> ((Eatable) bird).eat());
     }
 }
